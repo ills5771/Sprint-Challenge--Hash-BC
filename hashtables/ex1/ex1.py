@@ -22,13 +22,17 @@ def get_indices_of_item_weights(weights, length, limit):
         hash_table_insert(ht, weights[i], i)
 
     for j in range(0, len(weights)):
+
         key_check = limit - weights[j]
 
         # to retreive, check if any key equals limit minus weight for key in ht
         index = hash_table_retrieve(ht, key_check)
+
         if index:
             return (index, j)
+
     return None
+
 
     # Brute Force approach
     # arr = []
